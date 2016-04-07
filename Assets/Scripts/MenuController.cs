@@ -8,7 +8,6 @@ public class MenuController : MonoBehaviour
     private int curMenu = 0;
     private int prevMenu;
 	private bool isSpells;
-    private bool isLights;
 
     // Variables for swiping
     Vector2 prevPosition;
@@ -145,7 +144,6 @@ public class MenuController : MonoBehaviour
 	public void BtnPlayLights()
 	{
 		isSpells = false;
-	    isLights = true;
 	    menuItems[curMenu].SetActive(false);
 	    curMenu = 1;
         menuItems[curMenu].SetActive(true);
@@ -154,7 +152,6 @@ public class MenuController : MonoBehaviour
 	public void BtnPlaySpells()
 	{
 		isSpells = true;
-	    isLights = false; 
         menuItems[curMenu].SetActive(false);
         curMenu = 2;
         menuItems[curMenu].SetActive(true);
@@ -165,10 +162,12 @@ public class MenuController : MonoBehaviour
         if (isSpells)
         {
             // Code to load Spells Levels
+            Debug.Log("Plays Spells Levels");
         }
         else
         {
             // Code to Load Lights Levels
+            Debug.Log("Plays Lights Levels");
         }
         
     }
@@ -178,10 +177,12 @@ public class MenuController : MonoBehaviour
         if (isSpells)
         {
             // Code to load Spells Endless
+            Debug.Log("Plays Spells Endless");
         }
         else
         {
             // Code to Load Lights Endless
+            Debug.Log("Plays Lights Endless");
         }
     }
 
@@ -190,10 +191,12 @@ public class MenuController : MonoBehaviour
         if (isSpells)
         {
             // Code to load Spells Time
+            Debug.Log("Plays Spells Time");
         }
         else
         {
             // Code to Load Lights Time
+            Debug.Log("Plays Lights Time");
         }
     }
 }
